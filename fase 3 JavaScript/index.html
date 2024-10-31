@@ -57,8 +57,7 @@
           ><img class="iconeRedeSocial" src="15707869.png" alt=""
         /></a>
 
-        <div class="table-container">
-          <table id="draggable-table">
+        <table class="table-container" id="draggable-table">
           <thead>
             <tr>
               <th>Email</th>
@@ -68,7 +67,7 @@
               <th>Ucs cursadas</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="table-body">
             <tr>
               <td class="draggable" draggable="true">Lucoti4@gmail.com</td>
               <td class="draggable" draggable="true">(31) 99567-5340</td>
@@ -76,37 +75,29 @@
               <td class="draggable" draggable="true">Carros</td>
               <td class="draggable" draggable="true">Ambientes computacionais e conectividade</td>
             </tr>
-            <tr>
-              <td class="draggable" draggable="true"></td>
-              <td class="draggable" draggable="true"></td>
-              <td class="draggable" draggable="true">CSS</td>
-              <td class="draggable" draggable="true">viagens</td>
-              <td class="draggable" draggable="true">Sistemas computacionais e segurança</td>
-            </tr>
-            <tr>
-              <td class="draggable" draggable="true"></td>
-              <td class="draggable" draggable="true"></td>
-              <td class="draggable" draggable="true">JavaScript</td>
-              <td class="draggable" draggable="true">Jogos</td>
-              <td class="draggable" draggable="true"> Vida & Carreira</td>
-            </tr>
-            <tr>
-              <td class="draggable" draggable="true"></td>
-              <td class="draggable" draggable="true"></td>
-              <td class="draggable" draggable="true">Java</td>
-              <td class="draggable" draggable="true"></td>
-              <td class="draggable" draggable="true">Modelagem de software</td>
-            </tr>
-            <tr>
-              <td class="draggable" draggable="true"></td>
-              <td class="draggable" draggable="true"></td>
-              <td class="draggable" draggable="true">C#</td>
-              <td class="draggable" draggable="true"></td>
-              <td class="draggable" draggable="true">Programação de soluções computacionais</td>
-            </tr>
           </tbody>
         </table>
-      </div>
+        
+        <h2></h2>
+        <form id="formulario">
+          <label for="opcoes">Escolha uma opção:</label>
+          <select id="opcoes" name="opcoes" onchange="exibirCampoEntrada()">
+            <option value="">--Selecione--</option>
+            <option value="email">Email</option>
+            <option value="telefone">Telefone</option>
+            <option value="habilidades">Habilidades</option>
+            <option value="interesses">Interesses</option>
+            <option value="ucsCursadas">Ucs Cursadas</option>
+          </select>
+          
+          <div id="campo-container" style="margin-top: 15px;">
+          </div>
+          
+          <button type="button" onclick="armazenarValor()">Salvar</button>
+        </form>
+
+
+      
         
         <script src="script.js"></script>
 
